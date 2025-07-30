@@ -11,12 +11,8 @@ import { item } from "./modulos/item/itemModulo.js";
     //seccion
     seccion.appendChild(seccion1());
 
-    seccion.appendChild(item());
-
 
   
-
-
     return seccion;
 
 }
