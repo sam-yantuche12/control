@@ -1,6 +1,67 @@
+/* Contenedor general de los productos */
+.seccion-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 20px; /* espacio entre cuadros */
+    padding: 20px;
+    background-color: #1162db;
+}
+
+/* Cada tarjeta de producto */
 .item {
-    
-    width: 20rem;
-    height: 20rem;
-    background-color: red;
+    background-color: #da8b8b; 
+    border: 2px solid #ddd; 
+    border-radius: 10px; 
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;      /* Para alinear título, imagen, precio y descripción */
+    justify-content: space-between; /* Hace que el contenido se distribuya bien */
+    height: 350px; /* 🔹 MISMO alto para todas las tarjetas */
+}
+
+/* Hover con efecto */
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Imagen */
+.item img {
+    width: 100%;
+    height: 150px;   /* 🔹 Misma altura para todas las imágenes */
+    object-fit: contain; /* Ajusta la imagen sin deformarla */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Título */
+.item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* Precio */
+.item p:nth-of-type(1) {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+/* Descripción */
+.item p:nth-of-type(2) {
+    font-size: 0.9rem;
+    color: #0e0d0d;
+    overflow: hidden;      /* 🔹 Evita que la descripción rompa el cuadro */
+    text-overflow: ellipsis;
+}
+
+/* Clase cuando se selecciona */
+.verde {
+    border-color: green;
+    background-color: #e0ffe0;
 }

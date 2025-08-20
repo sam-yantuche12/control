@@ -10,7 +10,7 @@ export function header() {
   // Crear el div del logo
   const divLogo = document.createElement("div");
   divLogo.className = "div-logo";
-  divLogo.innerText = "🦊"; 
+  divLogo.innerText = "🪼"; 
   
   // Agregar los elementos al header
   header.appendChild(titulo);
