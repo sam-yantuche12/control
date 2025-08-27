@@ -3,7 +3,10 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 2rem;
+
   margin-top: 2rem;
+
   place-items: center;
   justify-self: center;
+  padding-bottom: 6rem;
 }

@@ -5,7 +5,7 @@ import { navComponent } from "./componentes/nav/navComponent.js";
 function seccion(){
 
     
-    let seccion = document.createElement('seccion');
+    let seccion = document.createElement("section");
 
     //Header 
     seccion.appendChild(header());
@@ -13,11 +13,10 @@ function seccion(){
     //seccion 
     seccion.appendChild(seccion1Component());
 
-    //nav 
-    seccion.appendChild(navComponent());
 
 
 return seccion;
 }
 
 document.body.appendChild(seccion1());
+document.body.appendChild(navComponent());

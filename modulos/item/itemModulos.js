@@ -1,18 +1,20 @@
+import { listaDeCompras } from "../../dataBases/carrito";
+
 // itemModulo.js
-export function item(titulo, urlImg, precio, descripcion) {
+export function item(title, image, precio, description) {
     let itemDiv = document.createElement("div");
     itemDiv.className = "item";
 
     // Título
     let h3 = document.createElement("h3");
-    h3.textContent = titulo;
+    h3.textContent = title;
     itemDiv.appendChild(h3);
 
     // Imagen
     let img = document.createElement("img");
-    img.src = urlImg;
-    img.alt = titulo;
-    itemDiv.appendChild(img);
+    img.src = image;
+    img.alt = title;
+    itemDiv.appendChild(image);
 
     // Precio
     let pPrecio = document.createElement("p");
@@ -21,15 +23,15 @@ export function item(titulo, urlImg, precio, descripcion) {
 
     // Descripción
     let pDesc = document.createElement("p");
-    pDesc.textContent = descripcion;
+    pDesc.textContent = description;
     itemDiv.appendChild(pDesc);
 
     // Evento click
     itemDiv.addEventListener("click", () => {
-        itemDiv.classList.add("verde"); 
-        let rHeader = document.querySelector(".header");
-        if (rHeader) rHeader.classList.add("ocultar");
+        listaDeCompras.push("comat")
+        console.log(listaDeCompras.length);
+        consoç.log(listaDeCompras)
     });
 
-    return itemDiv;
+    return item;
 }
