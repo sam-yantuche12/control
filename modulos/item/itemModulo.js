@@ -26,7 +26,7 @@ export function item(titulo, urlImg, precio, descripcion) {
 
     // Evento click
     itemDiv.addEventListener("click", () => {
-        itemDiv.classList.add("verde"); // agrega la clase verde
+        itemDiv.classList.add("verde"); 
         let rHeader = document.querySelector(".header");
         if (rHeader) rHeader.classList.add("ocultar");
     });
