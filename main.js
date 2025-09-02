@@ -3,9 +3,21 @@ import { seccion1 } from "./componentes/seccion1/seccionComponents.js";
 import { navComponent } from "./componentes/nav/navComponent.js";
 
 function seccion(){
+    let seccion = document.getItem("seccion");
 
-    
-    let seccion = document.createElement("section");
+
+       let listaDeCompras = localStorage.getItem("CarritoLista");
+
+        if (!listaDeCompras) {
+            listaDeCompras = [];
+            localStorage.setItem("carrito", JSON.stringify(listaDeCompras));
+            
+        } else{
+            listaDeCompras = JSON.parse(listaDeCompras);
+
+        }
+        console.log(listaDeCompras);
+        
 
     //Header 
     seccion.appendChild(header());

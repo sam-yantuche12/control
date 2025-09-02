@@ -1,4 +1,4 @@
-import { listaDeCompras } from "../../dataBases/carrito";
+import { listaDeCompras } from "../../dataBases/carrito.js";
 
 // itemModulo.js
 export function item(title, image, precio, description) {
@@ -28,9 +28,14 @@ export function item(title, image, precio, description) {
 
     // Evento click
     itemDiv.addEventListener("click", () => {
-        listaDeCompras.push("comat")
-        console.log(listaDeCompras.length);
-        consoç.log(listaDeCompras)
+        let listaDeProductos = JSON.parse(localStorage.getItem("carrito"));
+
+        localStorage.setItem("carrito", JSON.stringify(listaDeProductos));
+
+
+        let micarrito = localStorage.getItem("carrito");
+        console.log(JSON.parse(micarrito));
+
     });
 
     return item;
